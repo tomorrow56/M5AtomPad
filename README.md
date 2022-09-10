@@ -9,4 +9,4 @@ Wireless Contorol Pad of Famicon(NES) using M5Atom
 ## NESPad Library for Arduino
 https://code.google.com/archive/p/nespad/downloads
 
-https://github.com/joshmarinacci/nespad-arduino (Forked)
+https://github.com/joshmarinacci/nespad-arduino (Fork)
