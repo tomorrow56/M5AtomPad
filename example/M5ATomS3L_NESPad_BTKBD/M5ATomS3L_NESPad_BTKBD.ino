@@ -1,4 +1,20 @@
-//#include <M5Unified.h>
+/********************
+ * NESPas Bluetooth Keyboard example (for HOVERAir X1) 
+ * Copyright(c) tomorrow56 all rights reserved
+ * 
+ * NESPad Arduino Library
+ * Original
+ *  https://code.google.com/archive/p/nespad/downloads
+ * Forked on GiuHub
+ *  https://github.com/joshmarinacci/nespad-arduino
+ * Modified for M5Unified
+ *  https://github.com/tomorrow56/nespad-arduino/tree/master
+ *
+ * NimBLE Keyboard library
+ *  https://github.com/wakwak-koba/ESP32-NimBLE-Keyboard
+ ********************/
+
+#include <M5Unified.h>
 #include <FastLED.h>
 #include <BleKeyboard.h>
 #include <NESpad.h>
@@ -52,9 +68,11 @@ byte state = 0;
 byte oldstate = 0;
 
 void setup() {
-//  auto cfg = M5.config();
-//  M5.begin(cfg);
+  auto cfg = M5.config();
+  M5.begin(cfg);
   Serial.begin(115200);
+  
+  nintendo.begin();
 
   FastLED.addLeds<WS2811, LED_DATA_PIN, GRB>(leds, NUM_LEDS);
   FastLED.setBrightness(20);
